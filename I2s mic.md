@@ -1,12 +1,6 @@
 # 🎤 I2S Microphone (INMP441)  
 
-The **INMP441** is a high-performance, low-power digital microphone used for **audio input** in the smart door system.  
-
----
-
-## 🖼️ INMP441 Microphone Component Image  
-
-![Microphone Test Snapshot](./assets/Microphone%20test%20snapshot.png)  
+The **INMP441** is a high-performance, low-power digital microphone used for **audio input** in many Arduino or ESP32 projects by many students or even professionals.   
 
 ---
 
@@ -89,3 +83,21 @@ void loop() {
     Serial.printf("%ld\n", raw_samples[i]);
   }
 }
+```
+
+---
+
+Open this sketch up using the Arduino IDE and hit run. Now go to "Tools->Serial Plotter".
+
+Changes this according to your wiring
+```c++
+#define I2S_MIC_SERIAL_CLOCK GPIO_NUM_26
+#define I2S_MIC_LEFT_RIGHT_CLOCK GPIO_NUM_22
+#define I2S_MIC_SERIAL_DATA GPIO_NUM_21
+```
+
+---
+
+## 🖼️ INMP441 Microphone Sample "Hello"  
+
+![Microphone Test Snapshot](./assets/Microphone%20test%20snapshot.png)  

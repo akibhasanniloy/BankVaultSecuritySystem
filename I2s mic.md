@@ -6,7 +6,7 @@ The **INMP441** is a high-performance, low-power digital microphone used for **a
 
 ## 🖼️ INMP441 Microphone Component Image  
 
-![Microphone Test Snapshot](./assets/Microphone%20test%20snapshot.jpg)  
+![Microphone Test Snapshot](./assets/Microphone%20test%20snapshot.png)  
 
 ---
 

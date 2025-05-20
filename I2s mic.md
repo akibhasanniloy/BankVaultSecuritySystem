@@ -43,9 +43,7 @@ The **INMP441** uses **I2S communication**, requiring the following connections:
 
 ---
 
-# 📜 Minimal Test Code for INMP441
-
-This simple test code helps verify your microphone is working by outputting raw audio data to the Serial Plotter:
+# 📜 Test Code for INMP441
 
 ```cpp
 #include <driver/i2s.h>

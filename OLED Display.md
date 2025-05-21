@@ -34,7 +34,7 @@ This project demonstrates how to interface an **I2C OLED display** (SSD1306 128x
 
 ## 🖼️ Circuit Image
 
-![OLED with ESP32](assets/OLED test snapshot.jpg)
+![OLED with ESP32](./assets/OLED%20test%20snapshot.jpg)
 
 ---
 

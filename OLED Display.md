@@ -34,20 +34,48 @@ This project demonstrates how to interface an **I2C OLED display** (SSD1306 128x
 
 ## 🖼️ Circuit Image
 
-![OLED with ESP32](./assets/OLED%20test%20snapshot.jpg)
+![OLED with ESP32 pinout](./assets/OLED%20Display%20with%20esp32%20Connection.png)
 
 ---
 
 ## 🧪 Test Code
 
-See [`src/main.ino`](src/main.ino) for the complete Arduino sketch.
-
----
-
-## 🔧 #define Section
-
 ```cpp
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
-#define OLED_RESET    -1  // No reset pin used
-#define I2C_ADDRESS   0x3C
+#define OLED_RESET     -1
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
+
+void setup() {
+  Serial.begin(115200);
+  
+  // Initialize the OLED display
+  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+    Serial.println(F("SSD1306 allocation failed"));
+    for(;;);
+  }
+  
+  // Clear the buffer
+  display.clearDisplay();
+  
+  // Display "Hello"
+  display.setTextSize(2);
+  display.setTextColor(SSD1306_WHITE); 
+  display.setCursor(30, 20);          
+  display.println(F("Hello!"));
+  
+  display.display();
+  delay(2000);
+}
+
+void loop() {
+}
+```
+
+---
+🖼️ OLED Display Sample "Hello"
+![OLED with ESP32](./assets/OLED%20test%20snapshot.jpg)

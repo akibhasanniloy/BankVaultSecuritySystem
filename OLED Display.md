@@ -6,7 +6,7 @@ This project demonstrates how to interface an **I2C OLED display** (SSD1306 128x
 
 ## 🛒 Purchase Link
 
-- [Buy SSD1306 OLED Display (128x64)](https://www.amazon.com/s?k=ssd1306+oled+display)
+- [Buy SSD1306 OLED Display (128x64)]([https://www.amazon.com/s?k=ssd1306+oled+display](https://www.amazon.com/sk=oled+display+%280.96%22I2c%2F11c+SSD1306%29&crid=3CK5DI4X88HB3&sprefix=oled+display+0.96+i2c%2F11c+ssd1306+%2Caps%2C630&ref=nb_sb_noss))
 
 ---
 

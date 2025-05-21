@@ -1,42 +1,54 @@
-# ESP32 OLED Hello World Display
+# 🖥️ ESP32 OLED Display Example
 
-![OLED Display with ESP32](./assets/OLED Display with esp32 Connection.png)
-
-Simple example to display "Hello" on an SSD1306 OLED display using ESP32.
+This project demonstrates how to interface an **I2C OLED display** (SSD1306 128x64) with an **ESP32**, and print a simple message: `"Hello"`.
 
 ---
-## Purchase Links
-- [0.96" I2C OLED Display (SSD1306)](https://www.amazon.com/dp/B072Q2X2LL)
-- [ESP32 Development Board](https://www.amazon.com/dp/B08D5ZD528)
+
+## 🛒 Purchase Link
+
+- [Buy SSD1306 OLED Display (128x64)](https://www.amazon.com/s?k=ssd1306+oled+display)
 
 ---
-## Pin Configuration
 
-| OLED Display | ESP32 Pin |
-|--------------|-----------|
-| VCC          | 3.3V      |
-| GND          | GND       |
-| SCL          | GPIO 22   |
-| SDA          | GPIO 21   |
+## 📌 OLED Pin Configuration
 
-![Pin Connection Diagram](./assets/Microphone%20test%20snapshot.png)  
-
----
-## Dependencies
-- Adafruit SSD1306 Library
-- Adafruit GFX Library
+| OLED Pin | Description      |
+|----------|------------------|
+| VCC      | Power (3.3V or 5V) |
+| GND      | Ground           |
+| SDA      | I2C Data         |
+| SCL      | I2C Clock        |
 
 ---
-## Installation
-1. Clone this repository
-2. Open in Arduino IDE or PlatformIO
-3. Install required libraries
-4. Upload to ESP32
+
+## 🔌 ESP32 to OLED Connection
+
+| OLED Pin | ESP32 Pin |
+|----------|-----------|
+| VCC      | 3.3V      |
+| GND      | GND       |
+| SDA      | GPIO 21   |
+| SCL      | GPIO 22   |
 
 ---
-## Example Output
-![Hello World Output](./assets/OLED test snapshot.jpg)
+
+## 🖼️ Circuit Image
+
+![OLED with ESP32](assets
+/OLED Display with esp32 Connection.png)
 
 ---
-## Test Code
-See [examples/HelloWorld/HelloWorld.ino](examples/HelloWorld/HelloWorld.ino)
+
+## 🧪 Test Code
+
+See [`src/main.ino`](src/main.ino) for the complete Arduino sketch.
+
+---
+
+## 🔧 #define Section
+
+```cpp
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+#define OLED_RESET    -1  // No reset pin used
+#define I2C_ADDRESS   0x3C

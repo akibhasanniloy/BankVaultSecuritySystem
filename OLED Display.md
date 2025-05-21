@@ -19,7 +19,7 @@ Simple example to display "Hello" on an SSD1306 OLED display using ESP32.
 | SCL          | GPIO 22   |
 | SDA          | GPIO 21   |
 
-![Pin Connection Diagram](assets/OLED_Display_with_ESP32.jpg)
+![Pin Connection Diagram](./assets/Microphone%20test%20snapshot.png)  
 
 ---
 ## Dependencies

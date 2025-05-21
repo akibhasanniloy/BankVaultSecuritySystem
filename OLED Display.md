@@ -1,6 +1,6 @@
 # ESP32 OLED Hello World Display
 
-![OLED Display with ESP32](./assets/OLED Display with esp32 Connection.pn)
+![OLED Display with ESP32](./assets/OLED Display with esp32 Connection.png)
 
 Simple example to display "Hello" on an SSD1306 OLED display using ESP32.
 

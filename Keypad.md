@@ -32,7 +32,6 @@ int currentPasswordLength = 0;
 void setup() {
   Serial.begin(115200);
   
-  // OLED initialization
   if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
     Serial.println("OLED not found!");
     while (true);
@@ -50,7 +49,7 @@ void setup() {
 void loop() {
   char key = keypad.getKey();
   if (key != NO_KEY) {
-    delay(60);  // debounce
+    delay(60);
 
     if (key == 'C') {
       resetPassword();
@@ -68,7 +67,7 @@ void processKey(char key) {
     display.setCursor(0, 10);
   }
 
-  display.print(key);  // Show key pressed
+  display.print(key);
   display.display();
 
   password.append(key);
@@ -88,7 +87,7 @@ void processKey(char key) {
       showError("keypad");
     }
 
-    resetPassword();  // Reset for next attempt
+    resetPassword();
   }
 }
 
@@ -114,7 +113,6 @@ void controlDoor(bool locked, String method) {
   display.setCursor(0, 10);
   display.print("By: " + method);
   display.display();
-  // Add actual locking/unlocking hardware control here
 }
 
 void showError(String method) {
@@ -127,4 +125,5 @@ void showError(String method) {
   delay(1500);
   display.clearDisplay();
 }
+
 ```
